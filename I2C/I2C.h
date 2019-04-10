@@ -1,3 +1,6 @@
+#pragma once
+#ifndef I2C_H_
+#define I2C_H_
 #include "Arduino.h"
 #include "Wire.h"
 class I2C
@@ -12,3 +15,4 @@ class I2C
   private:
     int address;
 };
+#endif

@@ -1,11 +1,11 @@
 #include <FastLED.h>
 
 #include "FastLED_RGBW.h"     // Include the FastLED_RGBW helper file 
-#include <Adafruit_NeoPixel.h>
+
 #define LED_COUNT     77
 #define LED_OUT       6
 
-Adafruit_NeoPixel strip(LED_COUNT, LED_OUT, NEO_GRBW + NEO_KHZ800);
+
 
 CRGBW leds[LED_COUNT];  // FastLED with RGBW
 CRGB *ledsRGB = (CRGB *) &leds[0];
@@ -28,15 +28,16 @@ float fadeIndex;
 
 void setup()
 {  
-  Serial.begin(57600);
+  Serial.begin(9600);
   
-    LEDS.addLeds<WS2812B, LED_OUT, RGB>(ledsRGB, getRGBWsize(LED_COUNT));  //use both the CRGB pointer and the size function "getRGBWsize" in the FastLED_RGBW helper file
+    LEDS.addLeds<NEOPIXEL, LED_OUT, RGB>(ledsRGB, getRGBWsize(LED_COUNT));  //use both the CRGB pointer and the size function "getRGBWsize" in the FastLED_RGBW helper file
   
   brightness = STARTING_BRIGHTNESS;
   LEDS.setBrightness(brightnesSteps[brightness]);
   LEDS.show();
-  LEDS.setBrightness(0);
-  while(1);
+  Serial.println(getRGBWsize(LED_COUNT));
+//  LEDS.setBrightness(0);
+//  while(1);
 }
 
 
@@ -50,7 +51,7 @@ void colorLoop() {
     leds[i].r = 64*(1+sin(i/2.0 + j/4.0       ));
     leds[i].g = 64*(1+sin(i/1.0 + f/9.0  + 2.1));
     leds[i].b = 64*(1+sin(i/3.0 + k/14.0 + 4.2));
-    strip.setPixelColor(i, strip.Color(leds[i].r,leds[i].g,leds[i].b,0));
+//    strip.setPixelColor(i, strip.Color(leds[i].r,leds[i].g,leds[i].b,0));
   }
 //   strip.show(); 
   LEDS.show();
@@ -75,18 +76,21 @@ void loop()
 {
   // If'n we get some data, switch to passthrough mode
   // Draw the current pattern
-  colorLoop();
+//  colorLoop();
   //rainbowLoop();
   // Initial fade-in effect for pattern
-  if((millis() - lastTime > 15) && fadeIndex < FADE_STEPS) {
-    lastTime = millis();
-    fadeIndex++;
-    
-LEDS.setBrightness(brightnesSteps[brightness]*(fadeIndex/FADE_STEPS));
-strip.setBrightness(brightnesSteps[brightness]*(fadeIndex/FADE_STEPS));
-  }
-
-  LEDS.show();
+//  if((millis() - lastTime > 15) && fadeIndex < FADE_STEPS) {
+//    lastTime = millis();
+//    fadeIndex++;
+//    
+//LEDS.setBrightness(brightnesSteps[brightness]*(fadeIndex/FADE_STEPS));
+//  }
+    for (uint8_t i = 0; i < LED_COUNT; i++) {
+    leds[i].r = 255;
+    LEDS.show();
+    delay(100);
+    }
+    while(1);
 //strip.show(); 
 }
 
