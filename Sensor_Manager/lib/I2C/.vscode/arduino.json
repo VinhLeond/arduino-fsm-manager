@@ -1,0 +1,6 @@
+{
+    "board": "arduino:avr:uno",
+    "programmer": "AVRISP mkII",
+    "sketch": "e:\\OneDrive\\Vinh\\SUTD\\Capstone\\Software\\Github\\Arduino_Code\\Soil_Moisture\\Soil_Moisture.ino",
+    "port": "COM8"
+}

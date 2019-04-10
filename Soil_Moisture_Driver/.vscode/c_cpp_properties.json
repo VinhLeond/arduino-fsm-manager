@@ -1,0 +1,35 @@
+{
+    "configurations": [
+        {
+            "name": "Desktop",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Users/vinhl/AppData/Local/Arduino15/**",
+                "C:/Users/vinhl/Documents/Arduino/libraries/I2C"
+            ],
+            
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "intelliSenseMode": "msvc-x64"
+        },
+        {
+            "name": "Laptop",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Users/Vinh/AppData/Local/Arduino15/**",
+                "C:/Users/Vinh/OneDrive/Vinh/SUTD/Capstone/Software/Github/Arduino_Code/I2C"
+            ],
+            
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "intelliSenseMode": "msvc-x64"
+        }
+    ],
+    "version": 4
+}

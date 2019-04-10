@@ -1,0 +1,6 @@
+{
+    "programmer": "AVRISP mkII",
+    "board": "arduino:avr:uno",
+    "port": "COM8",
+    "sketch": "Soil_Moisture_Driver\\Soil_Moisture_Driver.ino"
+}

@@ -1,0 +1,5 @@
+{
+    "board": "arduino:avr:uno",
+    "programmer": "AVRISP mkII",
+    "sketch": "..\\Soil_Moisture_Driver\\Soil_Moisture_Driver.ino"
+}

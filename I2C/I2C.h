@@ -1,0 +1,14 @@
+#include "Arduino.h"
+#include "Wire.h"
+class I2C
+{
+  public:
+  I2C(int addr);
+  uint8_t* getData();
+  void setData(float readData);
+  void float2Bytes(float val, byte* bytes_array);
+  byte bytes[4];
+  int getAddress();
+  private:
+    int address;
+};

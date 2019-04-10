@@ -1,0 +1,36 @@
+{
+    "configurations": [
+        {
+            "name": "Desktop",
+            "includePath": [
+                "C:/Users/vinhl/AppData/Local/Arduino15/**",
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "intelliSenseMode": "msvc-x64",
+            "forcedInclude": [
+            ]
+        },
+        {
+            "name": "Laptop",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\**",
+                "C:\\Program Files (x86)\\Arduino\\libraries\\**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "intelliSenseMode": "msvc-x64",
+            "forcedInclude": [
+            ]
+        }
+    ],
+    "version": 4
+}
