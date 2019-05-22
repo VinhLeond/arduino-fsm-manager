@@ -1,9 +1,9 @@
 #include "Led.h"
 
-#undef ledCount
-#define ledCount     77
-#undef ledPort
-#define ledPort       6 
+//#undef ledCount
+//#define ledCount     77
+//#undef ledPort
+//#define ledPort       13
 
 
 //CRGBW leds[LED_COUNT];  // FastLED with RGBW
@@ -30,16 +30,18 @@ void setup()
   Serial.begin(9600);
 //  
 //  LEDS.addLeds<WS2812B, LED_OUT, RGB>(ledsRGB, getRGBWsize(LED_COUNT));  //use both the CRGB pointer and the size function "getRGBWsize" in the FastLED_RGBW helper file
-//  brightness = STARTING_BRIGHTNESS;
+  brightness = STARTING_BRIGHTNESS;
 //  ledStrip.setBrightness(brightnesSteps[brightness]);
 //  LEDS.show();
-  ledStrip.initialize();
+  ledStrip.config();
+//  lightOff();
+}
+
+void lightOff(){
   ledStrip.setBrightness(0);
   ledStrip.show();
   while(1);
 }
-
-
 void colorLoop() {
 //  static uint8_t i=0;  
   static int j = 0;
@@ -88,5 +90,3 @@ void loop()
   }
   ledStrip.show();
 }
-
-

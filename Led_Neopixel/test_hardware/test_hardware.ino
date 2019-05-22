@@ -3,7 +3,7 @@
 #include "FastLED_RGBW.h"     // Include the FastLED_RGBW helper file 
 
 #define LED_COUNT     77
-#define LED_OUT       6
+#define LED_OUT       2
 
 
 
@@ -30,14 +30,14 @@ void setup()
 {  
   Serial.begin(9600);
   
-    LEDS.addLeds<NEOPIXEL, LED_OUT, RGB>(ledsRGB, getRGBWsize(LED_COUNT));  //use both the CRGB pointer and the size function "getRGBWsize" in the FastLED_RGBW helper file
+  LEDS.addLeds<NEOPIXEL, LED_OUT>(ledsRGB, getRGBWsize(LED_COUNT));  //use both the CRGB pointer and the size function "getRGBWsize" in the FastLED_RGBW helper file
   
   brightness = STARTING_BRIGHTNESS;
   LEDS.setBrightness(brightnesSteps[brightness]);
   LEDS.show();
   Serial.println(getRGBWsize(LED_COUNT));
-//  LEDS.setBrightness(0);
-//  while(1);
+  LEDS.setBrightness(0);
+  while(1);
 }
 
 
@@ -93,5 +93,3 @@ void loop()
     while(1);
 //strip.show(); 
 }
-
-

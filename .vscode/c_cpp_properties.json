@@ -1,14 +1,34 @@
 {
     "configurations": [
         {
-            "name": "Win32",
+            "name": "Desktop",
             "includePath": [
-                "C:/Users/Vinh/AppData/Local/Arduino15/**",
-                "C:\\\\Program Files (x86)\\\\Arduino\\\\tools\\\\**",
-                "C:\\\\Program Files (x86)\\\\Arduino\\\\hardware\\\\arduino\\\\avr\\\\**"
+                "${workspaceFolder}/**",
+                "C:/Users/vinhl/AppData/Local/Arduino15/**",
+                "C:/Users/vinhl/Documents/Arduino/libraries/**",
+                "D:/Software/Arduino/**"
             ],
-            "forcedInclude": [
-                "C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino/arduino.h"
+            
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "intelliSenseMode": "msvc-x64"
+        },
+        {
+            "name": "Laptop",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Users/Vinh/AppData/Local/Arduino15/**",
+                "C:\\Program Files (x86)\\Arduino\\**",
+                "C:/Users/Vinh/Documents/Arduino/libraries/**"
+            ],
+            
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
             ],
             "intelliSenseMode": "msvc-x64"
         }
