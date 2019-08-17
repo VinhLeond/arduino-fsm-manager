@@ -37,6 +37,5 @@ Device test: This is test script for device driver testing. These script could b
 Production: This production code is the FSM code for the Arduino. Act as a main script for arduino program
 
 
-----
-## Note
+# Note
 I2C sensor developed on Arduino can be developed on the beaglebone side and vice versa.
