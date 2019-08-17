@@ -1,7 +1,7 @@
 
 # arduino-fsm-manager    
  SUTD-Panasonic Capstone 2019 
-# Discription
+# Description
 The code is engineered for object oriented programming. The main script is a finite state machine and each device is treated as an object.
 
 Working principle:   
