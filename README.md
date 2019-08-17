@@ -1,5 +1,5 @@
 
-# arduino-fsm-manager    
+# Arduino Finite State Machine 
  SUTD-Panasonic Capstone 2019 
 # Description
 The code is engineered for object oriented programming. The main script is a finite state machine and each device is treated as an object.
