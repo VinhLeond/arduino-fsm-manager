@@ -1,7 +1,6 @@
 
 # arduino-fsm-manager    
  SUTD-Panasonic Capstone 2019 
-----
 # Discription
 The code is engineered for object oriented programming. The main script is a finite state machine and each device is treated as an object.
 
@@ -17,9 +16,7 @@ The Beaglebone control actuator, sensor through arduino as following step:
 5. The Arduino goes back to the default state and wait for new device ID.
 
    
-
-----
-## Structure
+# Structure
 
 The code contain two parts: the object library and the script.    
 
