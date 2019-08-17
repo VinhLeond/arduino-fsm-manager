@@ -1,11 +1,10 @@
 
-# Arduino Finite State Machine 
- SUTD-Panasonic Capstone 2019 
-# Description
+# Arduino Finite State Machine
 This repo is the Arduino code of the PCube system. In the PCube system, the Arduino is the slave device that receive command from beaglebone and control the peripheral device accordingly.
 The code is engineered for object oriented programming. The main script is a finite state machine and each device is treated as an object. 
 
-Working principle:
+# Working principle
+
 Arduino connects to Beaglebone through I2C interface. While Arduino connect to actuators and sensors using any interface such as Uart, analog...etc.      
 Each peripheral connects to Arduino is identified by a unique ID, which can be served as a I2C address.  
 The Beaglebone controls actuators, sensors through Arduino as following steps:
