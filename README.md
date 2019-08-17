@@ -9,8 +9,8 @@ Arduino conect to Beaglebone through I2C interface. While Arduino connect to act
 Each device connected to Arduino is identified by a unique ID, which can be served as a I2C address as well.  
 The Beaglebone control actuator, sensor through arduino as following step:
    
-1. Firstly, beagle bone send out ID of the device.   
-2. The Arduino SFM goes to corresponding device state, upong receiving the address. It then, star waiting for the command.
+1. Firstly, beaglebone send out ID of the device.   
+2. The Arduino FSM goes to corresponding device state, upong receiving the address. It then, star waiting for the command.
 3. BeagleBone starts sending action command  
 4. The command is decoded and the corresponding device function is activated.
 5. The Arduino goes back to the default state and wait for new device ID.
